@@ -33,6 +33,10 @@ const ExpenseForm = (props) => {
         setEnteredDate('');
     }
 
+    const clickHandler = () => {
+        props.onCancel();
+    }
+
     return (
         <form onSubmit={submitHandler}>
             <div className='new-expense__controls'>
@@ -49,6 +53,7 @@ const ExpenseForm = (props) => {
                     <input type='date' value={enteredDate} min='2019-01-01' max='2022-12-31' onChange={dateChangeHandler} />
                 </div>
                 <div className='new-expense__actions'>
+                    <button type='button' onClick={clickHandler}>Cancel</button>
                     <button type='submit'>Add Expense</button>
                 </div>
             </div>
