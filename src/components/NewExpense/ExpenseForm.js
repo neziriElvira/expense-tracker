@@ -22,9 +22,11 @@ const ExpenseForm = (props) => {
 
         const expenseData = {
             title: enteredTitle,
-            amount: +enteredAmount,
+            amount: parseInt(enteredAmount, 10),
             date: new Date(enteredDate)
         }
+
+        console.log('new expense' + expenseData.amount)
 
         props.onSaveExpenseData(expenseData);
 
