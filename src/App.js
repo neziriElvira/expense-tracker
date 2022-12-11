@@ -32,7 +32,6 @@ const App = () => {
     setExpenses(prevExp => {
       return [expense, ...prevExp];
     });
-    console.log(expense);
   }
 
   return (
